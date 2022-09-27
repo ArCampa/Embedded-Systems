@@ -3,14 +3,13 @@
 struct Node
 {
     char *ident;
+    int count;
     struct Node *left;
     struct Node *right;
 };
 
-struct Node *first;
-struct Node *current;
+struct Node head;
 
-char *getNext();
 bool insertNode(char *);
-bool removeNode(char *);
+// bool removeNode(char *); removing is not needed in this case and adds too much complexity so I won't implement it
 bool printAlphabeticalOrder();
